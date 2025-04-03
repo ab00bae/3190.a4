@@ -1,0 +1,83 @@
+V "GNAT Lib v13"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+
+U queenarmies%b		queenarmies.adb		a207efcb NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W chess_types%s		chess_types.ads		chess_types.ali
+W showboard%s		showboard.adb		showboard.ali
+
+D ada.ads		20240521074738 76789da1 ada%s
+D a-except.ads		20240521074738 2a7d8d70 ada.exceptions%s
+D a-inteio.ads		20240521074738 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20240521074738 40018c65 ada.io_exceptions%s
+D a-stream.ads		20240521074738 119b8fb3 ada.streams%s
+D a-string.ads		20240521074738 90ac6797 ada.strings%s
+D a-sttebu.ads		20240521074738 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20240521074738 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20240521074738 9eaa38c6 ada.tags%s
+D a-textio.ads		20240521074738 5c2c6153 ada.text_io%s
+D a-tiinio.ads		20240521074738 e58fa6fb ada.text_io.integer_io%s
+D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
+D chess_types.ads	20250403081607 d6f88d6d chess_types%s
+D interfac.ads		20240521074738 15f799c2 interfaces%s
+D i-cstrea.ads		20240521074738 e53d8b8e interfaces.c_streams%s
+D queenarmies.adb	20250403091855 67fba970 queenarmies%b
+D showboard.ads		20250403090356 b9632321 showboard%s
+D system.ads		20240521074738 426dafb8 system%s
+D s-crtl.ads		20240521074738 8a0692f8 system.crtl%s
+D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
+D s-ficobl.ads		20240521074738 dc5161d4 system.file_control_block%s
+D s-parame.ads		20240904144414 1f39ba92 system.parameters%s
+D s-putima.ads		20240521074738 17291fe4 system.put_images%s
+D s-secsta.ads		20240521074738 578279f5 system.secondary_stack%s
+D s-soflin.ads		20240521074738 df77073e system.soft_links%s
+D s-stache.ads		20240521074738 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20240521074738 1c9580f6 system.standard_library%s
+D s-stoele.ads		20240521074738 ab5468e4 system.storage_elements%s
+D s-stoele.adb		20240521074738 8f5a9db6 system.storage_elements%b
+D s-traent.ads		20240521074738 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20240521074738 fa2a7f59 system.unsigned_types%s
+D s-wchcon.ads		20240521074738 d9032363 system.wch_con%s
+G a e
+G c Z b b [queenarmies standard 6 11 none]
+G r c none [queenarmies standard 6 11 none] [display showboard 3 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 16|1r6 1r23 2r6 36r7 38r7
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[11|46] 16|2w10 36r11 38r11
+X 10 a-textio.ads
+58K13*Text_IO 787e16 16|1w10 1r27
+519U14*Put 16|35s7 37s7
+566U14*Put_Line 16|40s7
+X 11 a-tiinio.ads
+60U14*Get 16|36s27[3|18] 38s27[3|18]
+X 13 chess_types.ads
+1K9*Chess_Types 6e16 16|3w6 3r23
+2n24*Empty{2E9} 16|8r55 20r38
+2n31*Black{2E9} 16|24r27
+2n38*White{2E9} 16|29r27
+3A9*Board_Matrix(2E9)<integer><integer>
+5A12*Constrained_Board{3A9}<integer><integer> 16|8r12
+X 16 queenarmies.adb
+6U11*QueenArmies 6b11 45l5 45t16
+7i4 N{positive} 28r19 28r31 38m31 39r32 44r19
+7i7 M{positive} 23r21 28r23 36m31 39r29
+8a4 Board{13|5A12} 20m7 24m10 29m10 44r12
+10V13 Valid_Input{boolean} 10b13 10>25 10>28 15l8 15t19 39s17
+10i25 M{positive} 14r34
+10i28 N{positive} 14r14 14r45
+11a7 Max_M(positive) 14r39
+17U14 Place_Queens 17b14 31l8 31t20 43s4
+23i11 Row{integer} 24r16
+28i11 Row{integer} 29r16
+X 17 showboard.ads
+2K9*Showboard 16|4w6 4r21 17|4e14
+3U14*Display 16|44s4
+
