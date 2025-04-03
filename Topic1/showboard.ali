@@ -24,11 +24,11 @@ D a-stuten.ads		20240521074738 c6ced0ae ada.strings.utf_encoding%s
 D a-tags.ads		20240521074738 9eaa38c6 ada.tags%s
 D a-textio.ads		20240521074738 5c2c6153 ada.text_io%s
 D a-unccon.ads		20240521074738 0e9b276f ada.unchecked_conversion%s
-D chess_types.ads	20250403081607 d6f88d6d chess_types%s
+D chess_types.ads	20250403094934 d6f88d6d chess_types%s
 D interfac.ads		20240521074738 15f799c2 interfaces%s
 D i-cstrea.ads		20240521074738 e53d8b8e interfaces.c_streams%s
-D showboard.ads		20250403090356 b9632321 showboard%s
-D showboard.adb		20250403090415 bd724116 showboard%b
+D showboard.ads		20250403094955 b9632321 showboard%s
+D showboard.adb		20250403095015 bd724116 showboard%b
 D system.ads		20240521074738 426dafb8 system%s
 D s-crtl.ads		20240521074738 8a0692f8 system.crtl%s
 D s-exctab.ads		20240521074738 91bef6ef system.exception_table%s
@@ -50,23 +50,23 @@ X 1 ada.ads
 16K9*Ada 20e8 15|1r6 1r23
 X 9 a-textio.ads
 58K13*Text_IO 787e16 15|1w10 1r27
-282U14*New_Line 15|12s10 26s10
-519U14*Put 15|8s10 10s13 18s10 21s30 22s30 23s30
+282U14*New_Line 15|12s10 25s10
+519U14*Put 15|8s10 10s13 17s10 20s30 21s30 22s30
 X 11 chess_types.ads
 1K9*Chess_Types 6e16 14|1w6 1r23 15|2w6 2r23
-2n24*Empty{2E9} 15|23r21
-2n31*Black{2E9} 15|21r21
-2n38*White{2E9} 15|22r21
+2n24*Empty{2E9} 15|22r21
+2n31*Black{2E9} 15|20r21
+2n38*White{2E9} 15|21r21
 3A9*Board_Matrix(2E9)<integer><integer>
 5A12*Constrained_Board{3A9}<integer><integer> 14|3r33 15|5r33
 X 14 showboard.ads
-2K9*Showboard 4l5 4e14 15|4b14 30l5 30t14
-3U14*Display 3>22 3>52 15|5b14 29l8 29t15
-3a22 Board{11|5A12} 15|5b22 20r18
-3i52 N{positive} 15|5b52 9r24 17r21 19r24
+2K9*Showboard 4l5 4e14 15|4b14 29l5 29t14
+3U14*Display 3>22 3>52 15|5b14 28l8 28t15
+3a22 Board{11|5A12} 15|5b22 19r18
+3i52 N{positive} 15|5b52 9r24 16r21 18r24
 X 15 showboard.adb
-6U17 Print_Line 6b17 13l11 13t21 16s7 27s10
+6U17 Print_Line 6b17 13l11 13t21 15s7 26s10
 9i14 Col{integer}
-17i11 Row{integer} 20r24
-19i14 Col{integer} 20r29
+16i11 Row{integer} 19r24
+18i14 Col{integer} 19r29
 

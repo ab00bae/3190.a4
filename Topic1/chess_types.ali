@@ -5,7 +5,7 @@ RN
 
 U chess_types%s		chess_types.ads		d6f88d6d NE OO PK
 
-D chess_types.ads	20250403081607 d6f88d6d chess_types%s
+D chess_types.ads	20250403094934 d6f88d6d chess_types%s
 D system.ads		20240521074738 426dafb8 system%s
 G a e
 G c Z s s [board_matrixIP chess_types 3 9 none]

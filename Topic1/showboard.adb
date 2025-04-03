@@ -1,4 +1,4 @@
-with Ada.Text_IO; use Ada.Text_IO;  -- THIS WAS MISSING
+with Ada.Text_IO; use Ada.Text_IO;
 with Chess_Types; use Chess_Types;
 
 package body Showboard is
@@ -11,7 +11,6 @@ package body Showboard is
          end loop;
          New_Line;
       end Print_Line;
-      
    begin
       Print_Line;
       for Row in 1..N loop
