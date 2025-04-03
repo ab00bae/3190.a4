@@ -1,0 +1,6 @@
+Peaceably Coexisting Armies of Queens by Robert A. Bosch. Optima, the Mathematical 
+Programming Society Newsletter, Issue 62. (1999)https://www.mathopt.org/Optima-Issues/optima62.pdf
+
+van Bommel, M.F., MacEachern , K.T., “Armies of Chess Queens”, The Mathematical Intelligencer, 40, pp.10-15 (2018)
+
+Literature links: https://oeis.org/A250000
