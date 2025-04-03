@@ -19,7 +19,12 @@ package body Showboard is
             case Board(Row, Col) is
                when Black => Put(" B |");
                when White => Put(" W |");
-               when Empty => Put("   |");
+               when Empty =>
+                  if (Row + Col) mod 2 = 0 then
+                     Put(" x |");
+                  else
+                     Put(" o |");
+                  end if;
             end case;
          end loop;
          New_Line;
