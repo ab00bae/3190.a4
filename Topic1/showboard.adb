@@ -1,34 +1,59 @@
 with Ada.Text_IO; use Ada.Text_IO;
-with Chess_Types; use Chess_Types;
 
-package body Showboard is
-   procedure Display(Board : in Constrained_Board; N : Positive) is
-      procedure Print_Line is
-      begin
-         Put("+");
-         for Col in 1..N loop
-            Put("---+");
-         end loop;
-         New_Line;
-      end Print_Line;
+package body ShowBoard is
+   procedure Show_Board(Board : in Board_Type; N : in Integer) is
+      Black_Queen : constant String := "♛";
+      White_Queen : constant String := "♕";
+      Empty : constant String := " ";
+      Horiz : constant String := "─";
+      Vert : constant String := "│";
+      Top_Left : constant String := "┌";
+      Top_Middle : constant String := "┬";
+      Top_Right : constant String := "┐";
+      Mid_Left : constant String := "├";
+      Mid_Middle : constant String := "┼";
+      Mid_Right : constant String := "┤";
+      Bot_Left : constant String := "└";
+      Bot_Middle : constant String := "┴";
+      Bot_Right : constant String := "┘";
    begin
-      Print_Line;
-      for Row in 1..N loop
-         Put("|");
-         for Col in 1..N loop
-            case Board(Row, Col) is
-               when Black => Put(" B |");
-               when White => Put(" W |");
-               when Empty =>
-                  if (Row + Col) mod 2 = 0 then
-                     Put(" x |");
-                  else
-                     Put(" o |");
-                  end if;
-            end case;
-         end loop;
-         New_Line;
-         Print_Line;
+      -- Top border
+      Put(Top_Left);
+      for I in 1 .. N - 1 loop
+         Put(Horiz & Top_Middle);
       end loop;
-   end Display;
-end Showboard;
+      Put_Line(Horiz & Top_Right);
+
+      -- Rows
+      for R in 1 .. N loop
+         Put(Vert);
+         for C in 1 .. N loop
+            if Board(R, C) = 1 then
+               Put(" " & Black_Queen & " ");
+            elsif Board(R, C) = 2 then
+               Put(" " & White_Queen & " ");
+            else
+               Put(" " & Empty & " ");
+            end if;
+            if C < N then Put(Vert); end if;
+         end loop;
+         Put_Line(Vert);
+
+         -- Middle or bottom border
+         if R < N then
+            Put(Mid_Left);
+            for I in 1 .. N - 1 loop
+               Put(Horiz & Mid_Middle);
+            end loop;
+            Put_Line(Horiz & Mid_Right);
+         end if;
+      end loop;
+
+      -- Bottom border
+      Put(Bot_Left);
+      for I in 1 .. N - 1 loop
+         Put(Horiz & Bot_Middle);
+      end loop;
+      Put_Line(Horiz & Bot_Right);
+   end Show_Board;
+end ShowBoard;
