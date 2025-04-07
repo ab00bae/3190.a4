@@ -1,2 +1,0 @@
-THE USER INTERFACE  The user interface will be very simple. It will be terminal input and output. For example: > Enter an operation: + - * / or ! * > Enter first operand:-578902234567899999999999999999 > Enter second operand: 3789428937777777722222222222222 > The result is:-2193708879815819212713875857334970815010096022277777777777778
-
