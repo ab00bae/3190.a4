@@ -1,3 +1,8 @@
+-- Ebube Esor 1253613
+-- Assignment 4 - Topic 2: Chess Armies
+-- Places m black and m white queens on an n x n board such that no queen
+-- attacks another of a different color. Uses the showboard package.
+
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 with ShowBoard; use ShowBoard;

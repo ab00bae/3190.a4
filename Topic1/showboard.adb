@@ -1,3 +1,7 @@
+--Ebube Esor 1253613
+--This is body of the visualization package of the chessboard
+--containing the logic to display the board with queens placed
+--using Unicode characters for an intuitive representation
 with Ada.Text_IO; use Ada.Text_IO;
 
 package body ShowBoard is
