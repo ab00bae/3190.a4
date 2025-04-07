@@ -18,16 +18,30 @@ procedure QueenArmies is
    Solutions_Found : Integer := 0;
    Solution1, Solution2 : Board_Type;
 
+   -- Function to compare two boards up to size N
+   function Boards_Equal(B1, B2 : Board_Type) return Boolean is
+   begin
+      for R in 1 .. N loop
+         for C in 1 .. N loop
+            if B1(R, C) /= B2(R, C) then
+               return False;
+            end if;
+         end loop;
+      end loop;
+      return True;
+   end Boards_Equal;
+
    procedure Solve(K : Integer) is
       R, C : Integer;
       Color : Integer;  -- 1 for black, 2 for white
    begin
       if K = 2 * M then
          -- Solution found
-         Solutions_Found := Solutions_Found + 1;
-         if Solutions_Found = 1 then
+         if Solutions_Found = 0 then
+            Solutions_Found := 1;
             Solution1 := Board;
-         elsif Solutions_Found = 2 then
+         elsif Solutions_Found = 1 and then not Boards_Equal(Board, Solution1) then
+            Solutions_Found := 2;
             Solution2 := Board;
          end if;
          return;
@@ -48,7 +62,6 @@ procedure QueenArmies is
                      Num_Black_Fwd_Diag(R - C + N) := Num_Black_Fwd_Diag(R - C + N) + 1;
                      Num_Black_Bwd_Diag(R + C - 1) := Num_Black_Bwd_Diag(R + C - 1) + 1;
                      Solve(K + 1);
-                     if Solutions_Found = 2 then return; end if;
                      -- Backtrack
                      Board(R, C) := 0;
                      Num_Black_Row(R) := Num_Black_Row(R) - 1;
@@ -67,7 +80,6 @@ procedure QueenArmies is
                      Num_White_Fwd_Diag(R - C + N) := Num_White_Fwd_Diag(R - C + N) + 1;
                      Num_White_Bwd_Diag(R + C - 1) := Num_White_Bwd_Diag(R + C - 1) + 1;
                      Solve(K + 1);
-                     if Solutions_Found = 2 then return; end if;
                      -- Backtrack
                      Board(R, C) := 0;
                      Num_White_Row(R) := Num_White_Row(R) - 1;
